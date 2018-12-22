@@ -36,7 +36,7 @@ def simrank(G):
                     tmpsim = 0
                     for Ia in tmpnodeA:
                         for Ib in tmpnodeB:
-                            tmpsim += sim[order[Ia]][order[Ib]]
+                            tmpsim += tmp[order[Ia]][order[Ib]]
                     sim[a][b] = c/(len(tmpnodeA)*len(tmpnodeB)) * tmpsim
                     change += abs(sim[a][b] - tmp[a][b])
                 b = b + 1
